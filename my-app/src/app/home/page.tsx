@@ -41,8 +41,7 @@ const HeroSection = () => {
       <StatItem number="42K" label="Artist" />
       </div>
      </div>
-
-    <div className= "flex w-[580] h-[547]">
+    {/* <div className= "flex w-[580] h-[547]">
         <Image
             src={img1} // Adjust the path as needed
             alt="image1"
@@ -58,7 +57,7 @@ const HeroSection = () => {
         alt="Monstrous Sandwich"
         className="relative w-[450px] h-[350px] left-[900px] top-[110.37px] bg-cover bg-center bg-no-repeat shadow-lg rounded-[17.34px] rotate-[+15.38deg] overflow-hidden border border-transparent"
         />
-    </div>
+    </div> */}
     </div>
   );
 };
