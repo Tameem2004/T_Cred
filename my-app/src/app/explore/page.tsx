@@ -2,7 +2,7 @@ import React from 'react'
 
 const explore = () => {
   return (
-    <div className='w-[1520] h-[800] bg-[#13082A]'>
+    <div className='w-full h-screen bg-[#13082A]'>
         explore
     </div>
   )

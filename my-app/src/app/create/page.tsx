@@ -750,7 +750,7 @@ export default function Web3Component() {
 	  };
 
 	return (
-		<div className="bg-[#13082A] flex justify-center items-center min-h-screen">
+		<div className="w-full h-screen bg-[#13082A] flex justify-center items-center min-h-screen">
       <div className="max-w-2xl mx-auto p-6 bg-gray-900 text-white rounded-lg shadow-lg">
         <h2 className="text-2xl font-semibold mb-4 text-center">
           Create NFT Collection
