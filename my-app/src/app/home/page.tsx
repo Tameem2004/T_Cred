@@ -12,7 +12,7 @@ const HeroSection = () => {
     const router = useRouter();
 
   return (
-    <div className="w-[1520] h-[800] bg-[#13082A]">
+    <div className="w-full h-screen bg-[#13082A]">
     <div className="absolute left-[64px] top-[140px] w-[820px] h-[527px]  flex flex-col items-start gap-[80px] p-[24px_0] isolation-isolate">
       {/* Main Text */}
       <div className="w-[820px] h-[340px] flex flex-col items-start gap-[16px]">
@@ -42,7 +42,7 @@ const HeroSection = () => {
       </div>
      </div>
 
-    {/* <div className= "flex w-[580] h-[547]">
+    <div className= "flex w-[580] h-[547]">
         <Image
             src={img1} // Adjust the path as needed
             alt="image1"
@@ -58,7 +58,7 @@ const HeroSection = () => {
         alt="Monstrous Sandwich"
         className="relative w-[450px] h-[350px] left-[900px] top-[110.37px] bg-cover bg-center bg-no-repeat shadow-lg rounded-[17.34px] rotate-[+15.38deg] overflow-hidden border border-transparent"
         />
-    </div> */}
+    </div>
     </div>
   );
 };
