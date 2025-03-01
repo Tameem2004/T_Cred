@@ -2,9 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
-import img1 from "../public/character-with-bicycle-that-has-word-monster-it.jpg"
-import sandwichImg from "../public/sandwichImg.jpg"
-import img3 from "../public/img3.jpg"
+import img from "../public/Untitled design (2).png"
 
 import { useRouter } from "next/navigation";
 
@@ -41,23 +39,13 @@ const HeroSection = () => {
       <StatItem number="42K" label="Artist" />
       </div>
      </div>
-    {/* <div className= "flex w-[580] h-[547]">
+    <div className= "flex w-[580] h-[547]">
         <Image
-            src={img1} // Adjust the path as needed
+            src={img} // Adjust the path as needed
             alt="image1"
-            className="relative w-[420px] h-[340px] left-[1000px] top-[98.37px] bg-cover bg-center bg-no-repeat shadow-lg rounded-[17.34px] rotate-[-6.38deg] overflow-hidden border border-transparent"
+            className="relative w-[560px] h-[340px] left-[900px] top-[98.37px] "
         />
-        <Image
-        src={sandwichImg}
-        alt="Monstrous Sandwich"
-        className="relative w-[450px] h-[350px] left-[940px] top-[78.37px] bg-cover bg-center bg-no-repeat shadow-lg rounded-[17.34px] rotate-[+6.38deg] overflow-hidden border border-transparent"
-        />
-        <Image
-        src={img3}
-        alt="Monstrous Sandwich"
-        className="relative w-[450px] h-[350px] left-[900px] top-[110.37px] bg-cover bg-center bg-no-repeat shadow-lg rounded-[17.34px] rotate-[+15.38deg] overflow-hidden border border-transparent"
-        />
-    </div> */}
+    </div>
     </div>
   );
 };
