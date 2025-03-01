@@ -12,7 +12,7 @@ const HeroSection = () => {
     const router = useRouter();
 
   return (
-    <div className="w-[1520] h-[800] bg-[#13082A]">
+    <div className="w-[1400] h-[1024] bg-[#13082A]">
     <div className="absolute left-[64px] top-[140px] w-[820px] h-[527px]  flex flex-col items-start gap-[80px] p-[24px_0] isolation-isolate">
       {/* Main Text */}
       <div className="w-[820px] h-[340px] flex flex-col items-start gap-[16px]">
