@@ -15,7 +15,7 @@ const NavBar = () => {
     { name: "Community", path: "" },
   ];
   return (
-    <div className="relative w-[1520px] h-[80px] p-[32px_18.5741px] flex flex-col items-center gap-[7.74px] bg-gradient-to-t from-[#29203B] to-[#29203B] backdrop-blur-sm">
+    <div className="relative w-full h-[80px] p-[32px_18.5741px] flex flex-col items-center gap-[7.74px] bg-gradient-to-t from-[#29203B] to-[#29203B] backdrop-blur-sm">
       {/* Navbar */}
       <div className="flex justify-between items-center w-[1400px] h-[25px]">
         {/* T_Cred */}
