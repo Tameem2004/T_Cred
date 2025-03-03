@@ -23,7 +23,7 @@ const NavBar = () => {
           T_Cred
         </div>
         {/* Navbar Links */}
-        <div className="flex justify-center items-center gap-[10px]">
+        <div className="hidden sm:flex  justify-center items-center gap-[10px]">
       {menuItems.map((item) => (
         <button
           key={item.name}
