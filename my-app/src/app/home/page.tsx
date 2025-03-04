@@ -2,66 +2,67 @@
 
 import React from "react";
 import Image from "next/image";
-import img from "../public/Untitled design (2).png"
-
+import img from "../public/Untitled design (2).png";
 import { useRouter } from "next/navigation";
 
 const HeroSection = () => {
-    const router = useRouter();
+  const router = useRouter();
 
   return (
-    <div className="w-full h-screen bg-[#13082A]">
-    <div className="absolute left-[64px] top-[140px] w-[820px] h-[527px]  flex flex-col items-start gap-[80px] p-[24px_0] isolation-isolate">
-      {/* Main Text */}
-      <div className="w-[820px] h-[340px] flex flex-col items-start gap-[16px]">
-        <h1 className="w-[820px] h-[288px] text-white font-[Radio Canada] font-bold text-[96px] leading-[100%] tracking-[0.03em] capitalize">
-          Order NFTs Now & Pay Later Using T_Cred
-        </h1>
-        <p className="w-[738px] h-[36px] text-[#9F8FC1] font-[Poppins] font-normal text-[24px] leading-[36px] tracking-[0.03em]">
-          Discover the power of NFTs for a unique digital experience.
-        </p>
+    <div className="w-full min-h-screen bg-[#13082A] flex flex-col items-center px-6 md:px-16 lg:px-24">
+      <div className="max-w-6xl flex flex-col lg:flex-row items-center justify-between w-full py-12">
+        {/* Left Section */}
+        <div className="text-center lg:text-left flex flex-col items-center lg:items-start gap-6">
+          <h1 className="text-white font-bold text-4xl md:text-5xl lg:text-6xl leading-tight tracking-wide capitalize">
+            Order NFTs Now & Pay Later Using T_Cred
+          </h1>
+          <p className="text-[#9F8FC1] text-lg md:text-xl lg:text-2xl leading-relaxed max-w-lg">
+            Discover the power of NFTs for a unique digital experience.
+          </p>
+          {/* Buttons */}
+          <div className="flex flex-col sm:flex-row gap-4">
+            <button
+              onClick={() => router.push("/explore")}
+              className="w-full sm:w-auto px-8 py-3 bg-[#7879F1] text-white text-lg font-semibold rounded-full"
+            >
+              Explore
+            </button>
+            <button
+              onClick={() => router.push("/create")}
+              className="w-full sm:w-auto px-8 py-3 border border-[#7879F1] text-[#7879F1] text-lg font-semibold rounded-full"
+            >
+              Create
+            </button>
+          </div>
+        </div>
+        {/* Right Section (Image) */}
+        <div className="mt-12 lg:mt-0 w-full lg:w-[50%] flex justify-center">
+          <Image src={img} alt="NFT Illustration" className="w-[80%] md:w-[60%] lg:w-[100%]" />
+        </div>
       </div>
-      {/* Buttons */}
-      <div className="flex flex-row items-start gap-[16px] w-[412px] h-[59px]">
-        <button onClick={()=>{router.push("/explore")}} className="w-[198px] h-[59px] flex justify-center items-center bg-[#7879F1] text-white font-[Poppins] font-semibold text-[18px] leading-[27px] tracking-[0.03em] rounded-[32px] p-[16px_32px]">
-          Explore
-        </button>
-        <button onClick={()=>{router.push("/create")}} className="w-[198px] h-[59px] flex justify-center items-center border border-[#7879F1] text-[#7879F1] font-[Poppins] font-semibold text-[18px] leading-[27px] tracking-[0.03em] rounded-[32px] p-[16px_32px]">
-          Create
-        </button>
+      {/* Stats Section */}
+      <div className="w-full max-w-xl bg-white bg-opacity-10 backdrop-blur-md rounded-2xl flex justify-around items-center p-4 mt-8">
+        <StatItem number="10K" label="Artwork" />
+        <div className="w-px h-12 bg-white opacity-40"></div>
+        <StatItem number="32K" label="BNPL" />
+        <div className="w-px h-12 bg-white opacity-40"></div>
+        <StatItem number="42K" label="Artist" />
       </div>
-      {/*stats*/}
-      <div className="absolute top-[550px] w-[418.46px] h-[85px] backdrop-blur-md rounded-[34.8718px] flex justify-between items-center px-4 bg-opacity-50">
-      <StatItem number="10K" label="Artwork" />
-      <div className="w-px h-[68.65px] bg-white opacity-40"></div>
-      <StatItem number="32K" label="BNPL" />
-      <div className="w-px h-[68.65px] bg-white opacity-40"></div>
-      <StatItem number="42K" label="Artist" />
-      </div>
-     </div>
-    <div className= "flex w-[580] h-[547]">
-        <Image
-            src={img} // Adjust the path as needed
-            alt="image1"
-            className="relative w-[560px] h-[340px] left-[900px] top-[98.37px] "
-        />
-    </div>
     </div>
   );
 };
 
 const StatItem = ({ number, label }: { number: string; label: string }) => {
-    return (
-      <div className="flex flex-col items-center gap-[8.72px] w-[104.62px] h-[71.72px]">
-        <span className="text-[#A5A6F6] text-[52.3077px] font-semibold leading-[78px] tracking-[0.01em]">
-          {number}
-        </span>
-        <span className="text-white text-[17.4359px] font-normal leading-[26px] tracking-[0.01em]">
-          {label}
-        </span>
-      </div>
-
-        );
-    };
+  return (
+    <div className="flex flex-col items-center">
+      <span className="text-[#A5A6F6] text-3xl md:text-4xl font-semibold">
+        {number}
+      </span>
+      <span className="text-white text-sm md:text-lg font-normal">
+        {label}
+      </span>
+    </div>
+  );
+};
 
 export default HeroSection;
