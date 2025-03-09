@@ -11,9 +11,9 @@ const NavBar = () => {
 
   const menuItems = [
     { name: "Home", path: "/" },
-    { name: "Discover", path: "" },
+    { name: "BNPL", path: "" },
     { name: "Marketplace", path: "/explore" },
-    { name: "Create", path: "/create" },
+    { name: "ListNft", path: "/create" },
     { name: "Community", path: "" },
   ];
 

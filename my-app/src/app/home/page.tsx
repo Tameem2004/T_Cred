@@ -31,7 +31,7 @@ const HeroSection = () => {
               onClick={() => router.push("/create")}
               className="w-full sm:w-auto px-8 py-3 border border-[#7879F1] text-[#7879F1] text-lg font-semibold rounded-full"
             >
-              Create
+              ListNft
             </button>
           </div>
         </div>
