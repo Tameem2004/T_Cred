@@ -125,7 +125,7 @@ const ParentComponent: React.FC = () => {
 
   return (
     <div>
-      <h1>Buy Now, Pay Later</h1>
+
       {/* Pass the handleSubmit function to the child component */}
       <BNPLForm onSubmit={handleSubmit} />
     </div>
