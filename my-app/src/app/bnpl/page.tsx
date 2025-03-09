@@ -1,15 +1,15 @@
 "use client";
-import { useState } from 'react';
-
-interface BNPLFormProps {
-  onSubmit: (formData: BNPLFormData) => void;
-}
+import React, { useState } from 'react';
 
 interface BNPLFormData {
   price: number;
   upfrontPayment: number;
   remainingBalance: number;
   installmentDuration: number;
+}
+
+interface BNPLFormProps {
+  onSubmit: (formData: BNPLFormData) => void;
 }
 
 const BNPLForm: React.FC<BNPLFormProps> = ({ onSubmit }) => {
@@ -117,4 +117,19 @@ const BNPLForm: React.FC<BNPLFormProps> = ({ onSubmit }) => {
   );
 };
 
-export default BNPLForm;
+const ParentComponent: React.FC = () => {
+  const handleSubmit = (formData: BNPLFormData) => {
+    console.log('Form Data Submitted:', formData);
+    // Handle the form submission here (e.g., send the data to an API or update the state)
+  };
+
+  return (
+    <div>
+      <h1>Buy Now, Pay Later</h1>
+      {/* Pass the handleSubmit function to the child component */}
+      <BNPLForm onSubmit={handleSubmit} />
+    </div>
+  );
+};
+
+export default ParentComponent;
